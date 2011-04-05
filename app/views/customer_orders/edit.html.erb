@@ -1,6 +1,11 @@
 <h1>Editing customer_order</h1>
 
-<%= render 'form' %>
+<%= simple_form_for(@customer_order) do |f| %>
+<%= f.input :customer_id %>
+<%= f.input :date_ordered %>
+<%= f.input :total %>
+<%= f.button :submit %>
+<% end %>
 
 <%= link_to 'Show', @customer_order %> |
 <%= link_to 'Back', customer_orders_path %>

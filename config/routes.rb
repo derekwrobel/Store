@@ -1,7 +1,7 @@
 StoreM2M::Application.routes.draw do
 
     resources :customer_orders
-
+    match 'orders' => 'customer_orders#index'
     resources :products
 
     resources :customers

@@ -1,6 +1,11 @@
 <h1>Editing product</h1>
 
-<%= render 'form' %>
+<%= simple_form_for(@product) do |f| %>
+<%= f.input :name %>
+<%= f.input :description %>
+<%= f.input :price %>
+<%= f.button :submit %>
+<% end %>
 
 <%= link_to 'Show', @product %> |
 <%= link_to 'Back', products_path %>

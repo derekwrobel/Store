@@ -8,6 +8,8 @@ gem 'rails', '3.0.5'
 gem 'sqlite3'
 gem 'annotate'
 gem 'paperclip'
+gem 'simple_form'
+gem 'simple-navigation'
 # Use unicorn as the web server
 # gem 'unicorn'
 
