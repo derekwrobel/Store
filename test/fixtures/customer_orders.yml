@@ -1,0 +1,24 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  customer_id: 1
+  date_ordered: 2011-03-24
+  total: 1
+
+two:
+  customer_id: 1
+  date_ordered: 2011-03-24
+  total: 1
+
+# == Schema Information
+#
+# Table name: customer_orders
+#
+#  id           :integer         not null, primary key
+#  customer_id  :integer
+#  date_ordered :date
+#  total        :integer
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
