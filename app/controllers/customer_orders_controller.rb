@@ -35,6 +35,7 @@ class CustomerOrdersController < ApplicationController
   # GET /customer_orders/1/edit
   def edit
     @customer_order = CustomerOrder.find(params[:id])
+    @products = CustomerOrder.find(params[:id]).products
   end
 
   # POST /customer_orders
