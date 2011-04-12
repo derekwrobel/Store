@@ -1,4 +1,4 @@
-<h1>Editing customer_order</h1>
+<h1>Edit Order (Order ID#<%= @customer_order.id%>)</h1>
 
 <%= simple_form_for(@customer_order) do |f| %>
 <%= f.association :customer, :prompt => "Choose a customer" %>

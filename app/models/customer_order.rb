@@ -5,6 +5,7 @@ class CustomerOrder < ActiveRecord::Base
 	
 	accepts_nested_attributes_for :customer_order_products
   
+  
 end
 
 # == Schema Information
