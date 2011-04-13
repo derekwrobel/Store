@@ -1,6 +1,6 @@
 class Customer < ActiveRecord::Base
 	validates_presence_of :first_name, :last_name, :address1, :city, :zip, :state
-	has_many :customer_orders
+	has_many :orders
 	has_attached_file :mp3
 	
   def name

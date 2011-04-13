@@ -1,6 +1,6 @@
-<h1>New customer_order</h1>
+<h1>New order</h1>
 
-<%= simple_form_for(@customer_order) do |f| %>
+<%= simple_form_for(@order) do |f| %>
 <%= f.association :customer, :prompt => "Choose a customer" %>
 <%= f.input :date_ordered %>
 <%= f.input :total %>
@@ -9,4 +9,4 @@
 
 
 
-<%= link_to 'Back', customer_orders_path %>
+<%= link_to 'Back', orders_path %>

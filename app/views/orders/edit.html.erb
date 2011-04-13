@@ -1,0 +1,32 @@
+<h1>Edit Order (Order ID#<%= @order.id%>)</h1>
+
+
+<%= simple_form_for(@order) do |f| %>
+<%= f.association :customer, :prompt => "Choose a customer" %>
+<%= f.input :date_ordered %>
+
+<table>
+
+		<% @order.order_products.each do |product| %>
+		    <%= f.fields_for :products, product do |product_fields| %>
+				<tr>
+					<td><%= product_fields.association :product, :prompt => "Choose a product " %></td>
+				    <td>$<%= product.product.price %></td>
+				    <td><%= product_fields.input :quantity %></td>
+  			    </tr>	
+			<% end %>
+		<% end %>
+
+</table>
+<blink>Buy MORE</blink>
+<%= link_to 'buy', buy_me_some_products_order_path %>
+
+<%= f.input :total %>
+<%= f.button :submit %>
+<% end %>
+
+
+<%= link_to 'Show', @order %> |
+<%= link_to 'Back', orders_path %>
+
+

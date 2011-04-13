@@ -1,10 +1,15 @@
 StoreM2M::Application.routes.draw do
 
-    resources :customer_orders
-    match 'orders' => 'customer_orders#index'
+    resources :orders do 
+      member do
+        get 'buy_me_some_products'
+        post 'add_product'
+      end
+    end
+    match 'orders' => 'orders#index'
     resources :products
-
     resources :customers
+    
 
     # The priority is based upon order of creation:
     # first created -> highest priority.
@@ -61,5 +66,5 @@ StoreM2M::Application.routes.draw do
 
     # This is a legacy wild controller route that's not recommended for RESTful applications.
     # Note: This route will make all actions in every controller accessible via GET requests.
-    # match ':controller(/:action(/:id(.:format)))'
+    #match ':controller(/:action(/:id(.:format)))'
   end

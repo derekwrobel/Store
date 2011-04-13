@@ -1,14 +1,14 @@
-class CustomerOrderProduct < ActiveRecord::Base
-	belongs_to :customer_order
+class OrderProduct < ActiveRecord::Base
+	belongs_to :order
 	belongs_to :product
 end
 
 # == Schema Information
 #
-# Table name: customer_order_products
+# Table name: orders_products
 #
 #  id                :integer         not null, primary key
-#  customer_order_id :integer
+#  orders_id :integer
 #  product_id        :integer
 #  quantity          :integer
 #  created_at        :datetime

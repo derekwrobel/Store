@@ -1,16 +1,16 @@
-class CustomerOrder < ActiveRecord::Base
-	has_many :customer_order_products
-	has_many :products, :through => :customer_order_products
+class Order < ActiveRecord::Base
+	has_many :order_products
+	has_many :products, :through => :order_products
 	belongs_to :customer
 	
-	accepts_nested_attributes_for :customer_order_products
+	accepts_nested_attributes_for :order_products
   
   
 end
 
 # == Schema Information
 #
-# Table name: customer_orders
+# Table name: orders
 #
 #  id           :integer         not null, primary key
 #  customer_id  :integer

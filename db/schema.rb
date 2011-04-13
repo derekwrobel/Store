@@ -10,24 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110324202317) do
-
-  create_table "customer_order_products", :force => true do |t|
-    t.integer  "customer_order_id"
-    t.integer  "product_id"
-    t.integer  "quantity"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "customer_id"
-  end
-
-  create_table "customer_orders", :force => true do |t|
-    t.integer  "customer_id"
-    t.date     "date_ordered"
-    t.integer  "total"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20110412031801) do
 
   create_table "customers", :force => true do |t|
     t.string   "salutation"
@@ -40,6 +23,23 @@ ActiveRecord::Schema.define(:version => 20110324202317) do
     t.string   "zip"
     t.string   "state"
     t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "order_products", :force => true do |t|
+    t.integer  "order_id"
+    t.integer  "product_id"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "customer_id"
+  end
+
+  create_table "orders", :force => true do |t|
+    t.integer  "customer_id"
+    t.date     "date_ordered"
+    t.integer  "total"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
